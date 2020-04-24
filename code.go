@@ -129,9 +129,7 @@ func LoadProducts(jsonPath string) ([]Product, error) {
 func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath string) error {
 	allProducts := []Product{}
 
-	for _, product := range productsSold {
-		allProducts = append(allProducts, product)
-	}
+	allProducts = append(allProducts, productsSold...)
 
 	for i, _ := range productsLeft {
 		productsLeft = append(allProducts, productsLeft[i])
