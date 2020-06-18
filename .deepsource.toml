@@ -5,7 +5,7 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_root = "github.com/deepsourcelabs/demo-go"
+  import_paths = ["github.com/deepsourcelabs/demo-go"]
 
 [[analyzers]]
 name = "docker"
