@@ -32,7 +32,7 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 	}
 
 	log.Println("==> EXEC COMMAND " + command)
-	log.Println("-> ARGS: " + strings.Join(args[:], " "))
+	log.Println("-> ARGS: " + strings.Join(args, " "))
 	log.Println("-> DIR: " + cmdDir)
 	log.Println("-> STDOUT/STDERR: ..")
 
