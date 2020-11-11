@@ -20,7 +20,7 @@
 
 This repository demonstrates sample issues in Go code raised by DeepSource.
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/deepsourcelabs/demo-go/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/deepsourcelabs/demo-go.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/deepsourcelabs/demo-go/?ref=repository-badge)
 
 ### Report
 
