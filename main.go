@@ -28,3 +28,9 @@ func main() {
 		fmt.Println(i.(Seller).DeliversTo(givenCity))
 	}
 }
+
+func appendData() {
+	var s []string
+	s = append(s, productPath)
+	s = append(s, sellerPath)
+}

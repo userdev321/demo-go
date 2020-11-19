@@ -145,3 +145,17 @@ func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath stri
 
 	return nil
 }
+
+func traverseProducts() {
+	var Products [2048]byte
+	for _, product := range Products {
+		fmt.Println(product)
+	}
+
+	for index := 0; index < len(Products); index++ {
+		productMap := make([][1024]byte, index)
+		for product, productIndex := range productMap {
+			fmt.Println(product, "indexed as", productIndex)
+		}
+	}
+}

@@ -70,3 +70,21 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 
 	return string(stdoutBuf.Bytes()), string(stderrBuf.Bytes()), nil
 }
+
+func ExampleOpenFile() {
+	f, err := os.OpenFile("notes.txt", os.O_RDWR|os.O_CREATE, 0755)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if err := f.Close(); err != nil {
+		log.Fatal(err)
+	}
+
+}
+
+func createTempFile() {
+	tmpFile, _ := os.Create("emptyFile.txt")
+	log.Println(tmpFile)
+
+}
