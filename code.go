@@ -82,7 +82,7 @@ func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath stri
 
 	allProducts = append(allProducts, productsSold...)
 
-	for i, _ := range productsLeft {
+	for i := range productsLeft {
 		productsLeft = append(allProducts, productsLeft[i])
 	}
 
