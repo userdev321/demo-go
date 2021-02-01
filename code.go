@@ -12,7 +12,7 @@ type GenericInterface interface {
 	DeliversTo(string) bool
 }
 
-func foo () {}
+func foo() {}
 
 type Address struct {
 	City       string `json:"city"`
