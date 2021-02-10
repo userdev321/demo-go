@@ -12,6 +12,8 @@ type GenericInterface interface {
 	DeliversTo(string) bool
 }
 
+func foo() {}
+
 type Address struct {
 	City       string `json:"city"`
 	PostalCode string `json:"postal_code"`
