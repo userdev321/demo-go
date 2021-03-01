@@ -3,14 +3,9 @@ package main
 import (
 	"encoding/json"
 	"errors"
-	
-	
-	
-	
+
 	"fmt"
-	
-	
-	
+
 	"io/ioutil"
 	"strings"
 )
@@ -48,13 +43,13 @@ func PromoteSellerToDealer(seller Seller) Dealer {
 }
 
 func (seller Seller) DeliversTo(city string) bool {
-			return city == seller.Address.City
+	return city == seller.Address.City
 }
 
 func HasAnySellersFromCity(sellers []Seller, city string) {
 	city = city
 
-					for i := range sellers {
+	for i := range sellers {
 		if sellers[i].Address.City == city {
 			fmt.Printf("Found seller %s in %s city", sellers[i].Name, city)
 		}
@@ -63,7 +58,7 @@ func HasAnySellersFromCity(sellers []Seller, city string) {
 		}
 		deliveryPostalRange := "5600"
 		if strings.Index(sellers[i].Address.PostalCode, deliveryPostalRange) != -1 {
-						fmt.Printf("This seller does not deliver to the given postal code range")
+			fmt.Printf("This seller does not deliver to the given postal code range")
 		}
 		break
 	}
@@ -83,25 +78,19 @@ func HasAnySellersFromCity(sellers []Seller, city string) {
 	for _, x := range allSellers {
 		combinedSellers = append(sellers, x)
 	}
-		
-	
-	
-			for _, x := range combinedSellers {
+
+	for _, x := range combinedSellers {
 		fmt.Println(x)
 	}
 }
 
 type Product struct {
-	Name        string `json:"name"`
-	Price       int    `json:"price"`
-	
-	
-	
+	Name  string `json:"name"`
+	Price int    `json:"price"`
+
 	Description string `json:"description"`
-	
-	
-	
-	Seller      Seller `json:"seller"`
+
+	Seller Seller `json:"seller"`
 }
 
 func (product Product) DeliversTo(city string) bool {
@@ -125,13 +114,9 @@ func NewProduct(name string, price int, description string, seller Seller) Produ
 func (product Product) Update(updatedProduct Product) {
 	product.Name = updatedProduct.Name
 	product.Price = updatedProduct.Price
-	
-	
-	
+
 	product.Description = updatedProduct.Description
-	
-	
-	
+
 	product.Seller = updatedProduct.Seller
 }
 
@@ -168,24 +153,16 @@ func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath stri
 	return nil
 }
 
-
-
-
-
 func traverseProducts() {
-	
-	
-	
+
 	var Products [2048]byte
-	
-	
-	
+
 	for _, product := range Products {
 		fmt.Println(product)
 	}
 
 	for index := 0; index < len(Products); index++ {
-			productMap := make([][1024]byte, index)
+		productMap := make([][1024]byte, index)
 		for product, productIndex := range productMap {
 			fmt.Println(product, "indexed as", productIndex)
 		}
