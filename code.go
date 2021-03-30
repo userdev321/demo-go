@@ -32,19 +32,12 @@ type Dealer struct {
 }
 
 func PromoteSellerToDealer(seller Seller) Dealer {
-	
-	
-	
-	
-	
+
 	dealer := Dealer{
-		Name:       seller.Name,
-		
-		
-		
-		
-							Address:    seller.Address,
-							IsVerified: seller.IsVerified,
+		Name: seller.Name,
+
+		Address:    seller.Address,
+		IsVerified: seller.IsVerified,
 	}
 	return dealer
 }
@@ -55,7 +48,7 @@ func (seller Seller) DeliversTo(city string) bool {
 
 func HasAnySellersFromCity(sellers []Seller, city string) {
 	city = city
-	
+
 	var i GenericInterface
 	i = &s
 
