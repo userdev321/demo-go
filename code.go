@@ -46,6 +46,9 @@ func (seller Seller) DeliversTo(city string) bool {
 
 func HasAnySellersFromCity(sellers []Seller, city string) {
 	city = city
+	
+	var i GenericInterface
+	i = &s
 
 	for i := range sellers {
 		if sellers[i].Address.City == city {
