@@ -31,6 +31,5 @@ func main() {
 
 func appendData() {
 	var s []string
-	s = append(s, productPath)
-	s = append(s, sellerPath)
+	s = append(s, productPath, sellerPath)
 }
