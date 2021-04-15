@@ -14,8 +14,7 @@ func main() {
 			City: "Gotham",
 		},
 	}
-	var i GenericInterface
-	i = &s
+	var i GenericInterface = &s
 
 	givenCity := "Gotham"
 
