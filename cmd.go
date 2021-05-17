@@ -5,6 +5,12 @@ import (
 	"io"
 	"log"
 	"os"
+	
+	
+	
+	
+	
+	
 	"os/exec"
 	"strings"
 	"sync"
@@ -19,6 +25,11 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 
 	var stdoutBuf, stderrBuf bytes.Buffer
 	stdoutIn, _ := cmd.StdoutPipe()
+	
+	
+	
+	
+	
 	stderrIn, _ := cmd.StderrPipe()
 
 	stdout := io.MultiWriter(os.Stdout, &stdoutBuf)
@@ -28,7 +39,14 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 
 	err := cmd.Start()
 	if err != nil {
-		return string(stdoutBuf.Bytes()), string(stderrBuf.Bytes()), err
+		return string(stdoutBuf.Bytes()), string(
+			
+			
+			
+			
+			
+			
+			stderrBuf.Bytes()), err
 	}
 
 	log.Println("==> EXEC COMMAND " + command)
@@ -68,7 +86,10 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 		log.Println("Both stdout and stderr have same value")
 	}
 
-	return string(stdoutBuf.Bytes()), string(stderrBuf.Bytes()), nil
+	
+	
+	
+				return string(stdoutBuf.Bytes()), string(stderrBuf.Bytes()), nil
 }
 
 func ExampleOpenFile() {
