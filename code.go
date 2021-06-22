@@ -150,7 +150,7 @@ func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath stri
 func traverseProducts() {
 	var Products [2048]byte
 	for _, product := range Products {
-		fmt.Printf(product.Name)
+		fmt.Printf(string(product))
 	}
 
 	for index := 0; index < len(Products); index++ {
