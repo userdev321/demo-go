@@ -129,7 +129,7 @@ func LoadProducts(jsonPath string) ([]Product, error) {
 func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath string) error {
 	allProducts := []Product{}
 
-	for _, product := range productsSold {
+	for _, product := range productsSold[:] {
 		allProducts = append(allProducts, product)
 	}
 
@@ -140,6 +140,7 @@ func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath stri
 	fmt.Println(allProducts[:])
 
 	if len(allProducts) == 0 {
+		fmt.Printf("There are zero products!\n")
 		return errors.New(fmt.Sprintf("%d products found. This is an error.", len(allProducts)))
 	}
 
@@ -149,7 +150,7 @@ func WriteProducts(productsSold []Product, productsLeft []Product, jsonPath stri
 func traverseProducts() {
 	var Products [2048]byte
 	for _, product := range Products {
-		fmt.Println(product)
+		fmt.Printf(product)
 	}
 
 	for index := 0; index < len(Products); index++ {
