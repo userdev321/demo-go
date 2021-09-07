@@ -12,7 +12,7 @@ func connect() {
 		log.Fatal(err)
 	}
 	defer l.Close()
-	
+
 	var i int
 	i = 5
 }
